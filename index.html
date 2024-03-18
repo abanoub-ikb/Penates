@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Penates - Your trusted real estate partner. Find your dream property today!"
+    />
+    <title>Penates - Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <img src="penates_logo.png" alt="Penates Logo" />
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex-col">
+      <section class="hero">
+        <div class="hero-content flex-col">
+          <h1>Welcome to Penates</h1>
+          <p>
+            Your trusted partner in real estate. Find your dream property now.
+          </p>
+        </div>
+      </section>
+
+      <section class="filter">
+        <form>
+            <div class="select-container">
+                <h3>PROPERTY TYPE</h3>
+                <div class="select wide" tabindex="1">
+                    <input class="selectopt" name="type" type="radio" id="opt1" checked>
+                    <label for="opt1" class="option">Villa</label>
+                    <input class="selectopt" name="type" type="radio" id="opt2">
+                    <label for="opt2" class="option">Apples</label>
+                    <input class="selectopt" name="type" type="radio" id="opt3">
+                    <label for="opt3" class="option">Grapefruit</label>
+                    <input class="selectopt" name="type" type="radio" id="opt4">
+                    <label for="opt4" class="option">Bananas</label>
+                    <input class="selectopt" name="type" type="radio" id="opt5">
+                    <label for="opt5" class="option">Watermelon</label>
+                  </div>
+
+                  <select class="mobile" name="type">
+                    <option value="Tagamoa">Villa</option>
+                    <option value="zayed">House</option>
+                    <option value="alex">Touin</option>
+                  </select>
+              </div>
+
+              <div class="select-container">
+                <h3>Location</h3>
+                <div class="select wide" tabindex="2">
+                    <input class="selectopt" name="location" type="radio" id="opt6" checked>
+                    <label for="opt6" class="option">Tagamoa</label>
+                    <input class="selectopt" name="location" type="radio" id="opt7">
+                    <label for="opt7" class="option">Apples</label>
+                    <input class="selectopt" name="location" type="radio" id="opt8">
+                    <label for="opt8" class="option">Grapefruit</label>
+                    <input class="selectopt" name="location" type="radio" id="opt9">
+                    <label for="opt9" class="option">Bananas</label>
+                    <input class="selectopt" name="location" type="radio" id="opt10">
+                    <label for="opt10" class="option">Watermelon</label>
+                  </div>
+                  <select class="mobile" name="location">
+                    <option value="Tagamoa">Tagamoa</option>
+                    <option value="zayed">zayed</option>
+                    <option value="alex">alex</option>
+                  </select>
+              </div>
+
+              <div class="select-container">
+                <h3>YOUR BUDGET</h3>
+                <div class="select wide" tabindex="3">
+                    <input class="selectopt" name="budget" type="radio" id="opt11" checked>
+                    <label for="opt11" class="option">ANY</label>
+                    <input class="selectopt" name="budget" type="radio" id="opt12">
+                    <label for="opt12" class="option">Apples</label>
+                    <input class="selectopt" name="budget" type="radio" id="opt13">
+                    <label for="opt13" class="option">Grapefruit</label>
+                    <input class="selectopt" name="budget" type="radio" id="opt14">
+                    <label for="opt14" class="option">Bananas</label>
+                    <input class="selectopt" name="budget" type="radio" id="opt15">
+                    <label for="opt15" class="option">Watermelon</label>
+                  </div>
+
+                  <select class="mobile" name="budget">
+                    <option value="Tagamoa">ANY</option>
+                    <option value="zayed">500</option>
+                    <option value="alex">1000</option>
+                  </select>
+              </div>
+              <div class="btn-container">
+                <button type="submit">Search</button>
+              </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Penates Real Estate</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
