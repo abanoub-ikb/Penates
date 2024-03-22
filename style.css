@@ -76,7 +76,7 @@ form {
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .btn-container {
