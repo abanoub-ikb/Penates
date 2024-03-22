@@ -8,19 +8,16 @@
       content="Welcome to Penates - Your trusted real estate partner. Find your dream property today!"
     />
     <title>Penates - Real Estate</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="flex-col">
     <!-- Header Section -->
     <header>
       <div class="logo">
-        <img src="penates_logo.png" alt="Penates Logo" />
+        <img src="assets/images/penates_logo.png" alt="Penates Logo" />
       </div>
     </header>
 
@@ -29,45 +26,46 @@
       <section class="hero">
         <div class="hero-content flex-col">
           <h1>Welcome to Penates</h1>
-          <p>
+          <h2 class="wide">
             Your trusted partner in real estate. Find your dream property now.
-          </p>
+          </h2>
         </div>
       </section>
 
       <section class="filter">
+        <h2 class="mobile">Find your dream property now</h2>
         <form>
             <div class="select-container">
-                <h3>PROPERTY TYPE</h3>
-                <div id="type" class="select wide" tabindex="1">
+                <h3 id="p-type">PROPERTY TYPE</h3>
+                <div id="type" class="select wide">
                     <input class="selectopt" value="ALL" name="type" type="radio" id="opt1" checked>
                     <label for="opt1" class="option">ALL</label>
                   </div>
 
-                  <select class="mobile" name="type">
+                  <select aria-labelledby="p-type" class="mobile" name="type">
                     <option value="All">All</option>
                   </select>
               </div>
 
               <div class="select-container">
-                <h3>Location</h3>
-                <div id="location" class="select wide" tabindex="2">
+                <h3 id="p-location">Location</h3>
+                <div id="location" class="select wide">
                     <input class="selectopt" value="ALL" name="location" type="radio" id="opt6" checked>
                     <label for="opt6" class="option">ALL</label>
                   </div>
-                  <select class="mobile" name="location">
+                  <select aria-labelledby="p-location" class="mobile" name="location">
                     <option value="All">All</option>
                   </select>
               </div>
 
               <div class="select-container">
-                <h3>YOUR BUDGET</h3>
-                <div id="budget" class="select wide" tabindex="3">
+                <h3 id="p-budget">YOUR BUDGET</h3>
+                <div id="budget" class="select wide">
                     <input class="selectopt" name="budget" value="ANY" type="radio" id="opt11" checked>
                     <label for="opt11" class="option">ANY</label>
                   </div>
 
-                  <select class="mobile" name="budget">
+                  <select aria-labelledby="p-budget" class="mobile" name="budget">
                     <option value="ANY">ANY</option>
                   </select>
               </div>
@@ -80,6 +78,17 @@
 
     <!-- Footer Section -->
     <footer>
+      <div class="links">
+        <a target="_blank" aria-label="facebook-link" rel="noreferrer" href="">
+          <img src="assets/icons/facebook.png" alt="facebook">
+        </a>
+        <a target="_blank" aria-label="instagram-link" rel="noreferrer" href="">
+          <img src="assets/icons/instagram.png" alt="instagram">
+        </a>
+        <a target="_blank" aria-label="linkedin-link" rel="noreferrer" href="">
+          <img src="assets/icons/linkedin.png" alt="linkedin">
+        </a>
+      </div>
       <p>&copy; 2024 Penates Real Estate</p>
     </footer>
 
