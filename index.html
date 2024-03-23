@@ -8,10 +8,14 @@
       content="Welcome to Penates - Your trusted real estate partner. Find your dream property today!"
     />
     <title>Penates - Real Estate</title>
-    <link rel="preload" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+     rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 850px)"/>
   </head>
   <body class="flex-col">
     <!-- Header Section -->
@@ -37,44 +41,63 @@
         <form>
             <div class="select-container">
                 <h3 id="p-type">PROPERTY TYPE</h3>
-                <div id="type" class="select wide">
-                    <input class="selectopt" value="ALL" name="type" type="radio" id="opt1" checked>
-                    <label for="opt1" class="option">ALL</label>
+                  <div class="select">
+                    <select aria-labelledby="p-type" class="" name="type">
+                      <option value="All">All</option>
+                    </select>
                   </div>
-
-                  <select aria-labelledby="p-type" class="mobile" name="type">
-                    <option value="All">All</option>
-                  </select>
               </div>
 
               <div class="select-container">
                 <h3 id="p-location">Location</h3>
-                <div id="location" class="select wide">
-                    <input class="selectopt" value="ALL" name="location" type="radio" id="opt6" checked>
-                    <label for="opt6" class="option">ALL</label>
+                  <div class="select">
+                    <select aria-labelledby="p-location" class="" name="location">
+                      <option value="All">All</option>
+                    </select>
                   </div>
-                  <select aria-labelledby="p-location" class="mobile" name="location">
-                    <option value="All">All</option>
-                  </select>
               </div>
 
               <div class="select-container">
                 <h3 id="p-budget">YOUR BUDGET</h3>
-                <div id="budget" class="select wide">
-                    <input class="selectopt" name="budget" value="ANY" type="radio" id="opt11" checked>
-                    <label for="opt11" class="option">ANY</label>
+                  <div class="select">
+                    <select aria-labelledby="p-budget" class="" name="budget">
+                      <option value="ANY">ANY</option>
+                    </select>
                   </div>
-
-                  <select aria-labelledby="p-budget" class="mobile" name="budget">
-                    <option value="ANY">ANY</option>
-                  </select>
               </div>
               <div class="btn-container">
-                <button type="submit">Search</button>
+                <button class="submit" type="submit">Search</button>
               </div>
         </form>
       </section>
     </main>
+
+    <section id="contact">
+      <h3 class="section-head">Need Help ?</h3>
+      <p>Fill the form and our experts will call you</p>
+      <form class="flex-col">
+        <div class="input-group flex-col">
+          <label for="user-name">Name</label>
+          <input class="contact-input" type="text" name="userName" id="user-name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group flex-col">
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" name="phone" class="contact-input" />
+          <p class="alert">Invalid phone number</p>
+        </div>
+
+        <div class="input-group flex-col">
+          <label for="message">Your Question</label>
+          <textarea class="contact-input" id="message" name="message" rows="10" placeholder="How can we help you?"></textarea> 
+        </div>
+        
+        <div>
+          <button class="submit" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -91,7 +114,10 @@
       </div>
       <p>&copy; 2024 Penates Real Estate</p>
     </footer>
-
+    <!-- scroll to top button -->
+    <button type="button" id="scroll-top" aria-label="scroll-top" title="UP">
+      <img class="up" src="assets/icons/up-arrow.png" alt="scroll top">
+    </button>
     <script src="index.js"></script>
   </body>
 </html>
