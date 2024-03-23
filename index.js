@@ -7,7 +7,7 @@ const mobileScreenLocationSelect = document.querySelector("select[name=location]
 const mobileScreenBudgetSelect = document.querySelector("select[name=budget]");
 const phoneInputField = document.querySelector("#phone");
 const phoneErro  = document.querySelector(".alert");
-
+const successBox  = document.querySelector(".success-box");
 
 const phoneInput = window.intlTelInput(phoneInputField, {
   utilsScript:
@@ -42,10 +42,12 @@ form.addEventListener("submit", (e) => {
 
 contactForm.onsubmit = (e) => {
   e.preventDefault();
+  successBox.classList.remove('success')
   if(phoneInput.isValidNumber()){
     const formData = new FormData(contactForm);
     formData.set("phone", phoneInput.getNumber());
     contactForm.reset();
+    successBox.classList.add('success')
     phoneErro.style.display = 'none';
   }else{
     phoneErro.style.display = 'block';
