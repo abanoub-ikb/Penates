@@ -45,7 +45,6 @@ header {
 main {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../assets/images/analog-landscape-city-with-buildings.avif);
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
