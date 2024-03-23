@@ -1,0 +1,43 @@
+@media (max-width: 850px) {
+    main {
+      gap: 1rem;
+      padding-top: 5rem;
+    }
+  
+    form:not(#contact form) {
+      flex-direction: column;
+      width: 90vw;
+      padding: 1rem;
+      gap: 5px;
+    }
+
+    #contact{
+        padding: 1rem;
+      }
+      
+      #contact form{
+        width: 90vw;
+      }
+  
+    .submit {
+      padding: 11px 80px;
+    }
+  
+    .wide {
+      display: none;
+    }
+  
+    .mobile {
+      display: block;
+    }
+  
+    h2.mobile{
+      background-color: transparent;
+      text-align: center;
+    }
+  
+    .select-container {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,235 @@
+
+:root {
+  --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  min-height: 100svh;
+  overflow: auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  top: 0;
+}
+
+.logo {
+  width: 35%;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+main {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/analog-landscape-city-with-buildings.avif);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  color: aliceblue;
+  gap: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.hero-content {
+  gap: 10px;
+}
+
+.hero-content h1 {
+  font-weight: 900;
+  font-size: clamp(2em, 4vw, 5em);
+}
+
+.hero-content h2 {
+  font-size: clamp(1.5em, 2vw, 3em);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.btn-container {
+  margin-top: 25px;
+}
+
+.submit {
+  display: inline-block;
+  line-height: 1;
+  background-color: #69727d;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  fill: #fff;
+  text-align: center;
+  transition: all 0.3s;
+  background-color: rgb(30, 65, 100);
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #33beff;
+}
+
+select {
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  min-width: 15em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  color: #f39c12;
+}
+
+.mobile {
+  display: none;
+  width: 100%;
+  height: 40px;
+  background: #666;
+  color: white;
+  padding: 0 5px;
+}
+
+#contact{
+  padding: 2rem;
+  background-color: #B5C0D0;
+  text-align: center;
+}
+
+#contact form{
+  width: 50%;
+}
+
+.input-group{
+  width:100%;
+  gap: 10px;
+  text-align: left;
+}
+
+.contact-input{
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  min-width: 50%;
+}
+
+.phone-group{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.alert{
+  background-color:#ff8383;
+  color: red;
+  padding: 5px;
+  border-radius: 2px;
+  width: fit-content;
+  display: none;
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.links img{
+  object-fit: cover;
+  max-width: 1.5rem;
+}
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  border: none;
+  cursor: pointer;
+  width: 3rem;
+  background-color: transparent;
+  
+}
+
+.up{
+  object-fit: cover;
+  max-width: 100%;
+}
