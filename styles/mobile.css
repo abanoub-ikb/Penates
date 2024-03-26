@@ -39,5 +39,9 @@
     .select-container {
       width: 100%;
     }
+
+    #prev-btn,#nxt-btn{
+      display: none;
+    }
   }
   
