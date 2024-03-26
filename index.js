@@ -8,6 +8,24 @@ const mobileScreenBudgetSelect = document.querySelector("select[name=budget]");
 const phoneInputField = document.querySelector("#phone");
 const phoneErro  = document.querySelector(".alert");
 const successBox  = document.querySelector(".success-box");
+const carousel = document.querySelector('.carousel-wrapper');
+const prevBtn = document.getElementById('prev-btn');
+const nxtBtn = document.getElementById('nxt-btn');
+
+carousel.scrollWidth === carousel.clientWidth && (nxtBtn.style.display = 'none');
+
+nxtBtn.onclick = (e) => {
+  carousel.scrollBy({left:carousel.clientWidth,behavior:"smooth"});
+}
+
+prevBtn.onclick = (e) => {
+  carousel.scrollBy({left:(carousel.clientWidth)*-1,behavior:"smooth"});
+}
+
+carousel.onscroll = (e) =>{
+  carousel.scrollLeft <= 0 ? prevBtn.style.display = 'none' : prevBtn.style.display = 'block';
+  (carousel.scrollWidth - carousel.clientWidth) === carousel.scrollLeft ? nxtBtn.style.display = 'none' : nxtBtn.style.display = 'block';
+}
 
 const phoneInput = window.intlTelInput(phoneInputField, {
   utilsScript:

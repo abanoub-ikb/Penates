@@ -8,14 +8,23 @@
       content="Welcome to Penates - Your trusted real estate partner. Find your dream property today!"
     />
     <title>Penates - Real Estate</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <link
-     rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 850px)"/>
+    <link
+      rel="stylesheet"
+      href="styles/mobile.css"
+      media="screen and (max-width: 850px)"
+    />
   </head>
   <body class="flex-col">
     <!-- Header Section -->
@@ -26,7 +35,7 @@
     </header>
 
     <!-- Main Content Section -->
-    <main class="flex-col">
+    <main id="main" class="flex-col">
       <section class="hero">
         <div class="hero-content flex-col">
           <h1>Welcome to Penates</h1>
@@ -39,38 +48,139 @@
       <section class="filter">
         <h2 class="mobile">Find your dream property now</h2>
         <form>
-            <div class="select-container">
-                <h3 id="p-type">PROPERTY TYPE</h3>
-                  <div class="select">
-                    <select aria-labelledby="p-type" class="" name="type">
-                      <option value="All">All</option>
-                    </select>
-                  </div>
-              </div>
+          <div class="select-container">
+            <h3 id="p-type">PROPERTY TYPE</h3>
+            <div class="select">
+              <select aria-labelledby="p-type" class="" name="type">
+                <option value="All">All</option>
+              </select>
+            </div>
+          </div>
 
-              <div class="select-container">
-                <h3 id="p-location">Location</h3>
-                  <div class="select">
-                    <select aria-labelledby="p-location" class="" name="location">
-                      <option value="All">All</option>
-                    </select>
-                  </div>
-              </div>
+          <div class="select-container">
+            <h3 id="p-location">Location</h3>
+            <div class="select">
+              <select aria-labelledby="p-location" class="" name="location">
+                <option value="All">All</option>
+              </select>
+            </div>
+          </div>
 
-              <div class="select-container">
-                <h3 id="p-budget">YOUR BUDGET</h3>
-                  <div class="select">
-                    <select aria-labelledby="p-budget" class="" name="budget">
-                      <option value="ANY">ANY</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="btn-container">
-                <button class="submit" type="submit">Search</button>
-              </div>
+          <div class="select-container">
+            <h3 id="p-budget">YOUR BUDGET</h3>
+            <div class="select">
+              <select aria-labelledby="p-budget" class="" name="budget">
+                <option value="ANY">ANY</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="submit" type="submit">Search</button>
+          </div>
         </form>
       </section>
     </main>
+
+    <section id="developers" aria-label="Developers List">
+      <h3 class="section-head">Top Compounds</h3>
+      <div class="carousel-container">
+        <button id="prev-btn"><img src="assets/icons/previous_2879564 .png" alt="previous"></button>
+        <button id="nxt-btn"><img src="assets/icons/next.png" alt="next"></button>
+      <ul class="carousel-wrapper" role="list">
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf-near-bookshelf_105762-2224.avif" alt="" />
+              <figcaption>This is an example image.</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room_105762-1772.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2199.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room_105762-1772.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2199.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2199.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/analog-landscape-city-with-buildings.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room_105762-1772.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf-with-pouf_105762-2177.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/modern-luxury-hotel-office-reception-lounge-with-meeting-room_105762-1772.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+
+        <li role="listitem" class="list-item">
+          <a href="">
+            <figure>
+              <img src="assets/images/analog-landscape-city-with-buildings.avif" alt="" />
+            </figure>
+          </a>
+        </li>
+       
+      </ul>
+    </div>
+    </section>
 
     <section id="contact">
       <h3 class="section-head">Need Help ?</h3>
@@ -79,7 +189,14 @@
         <p class="success-box">Your Question Successfully Submited</p>
         <div class="input-group flex-col">
           <label for="user-name">Name</label>
-          <input class="contact-input" type="text" name="userName" id="user-name" placeholder="Your Name" required>
+          <input
+            class="contact-input"
+            type="text"
+            name="userName"
+            id="user-name"
+            placeholder="Your Name"
+            required
+          />
         </div>
 
         <div class="input-group flex-col">
@@ -90,13 +207,18 @@
 
         <div class="input-group flex-col">
           <label for="message">Your Question</label>
-          <textarea class="contact-input" id="message" name="message" rows="10" placeholder="How can we help you?"></textarea> 
+          <textarea
+            class="contact-input"
+            id="message"
+            name="message"
+            rows="10"
+            placeholder="How can we help you?"
+          ></textarea>
         </div>
-        
+
         <div>
           <button class="submit" type="submit">Submit</button>
         </div>
-
       </form>
     </section>
 
@@ -104,20 +226,20 @@
     <footer>
       <div class="links">
         <a target="_blank" aria-label="facebook-link" rel="noreferrer" href="">
-          <img src="assets/icons/facebook.png" alt="facebook">
+          <img src="assets/icons/facebook.png" alt="facebook" />
         </a>
         <a target="_blank" aria-label="instagram-link" rel="noreferrer" href="">
-          <img src="assets/icons/instagram.png" alt="instagram">
+          <img src="assets/icons/instagram.png" alt="instagram" />
         </a>
         <a target="_blank" aria-label="linkedin-link" rel="noreferrer" href="">
-          <img src="assets/icons/linkedin.png" alt="linkedin">
+          <img src="assets/icons/linkedin.png" alt="linkedin" />
         </a>
       </div>
       <p>&copy; 2024 Penates Real Estate</p>
     </footer>
     <!-- scroll to top button -->
     <button type="button" id="scroll-top" aria-label="scroll-top" title="UP">
-      <img class="up" src="assets/icons/up-arrow.png" alt="scroll top">
+      <img class="up" src="assets/icons/up-arrow.png" alt="scroll top" />
     </button>
     <script src="index.js"></script>
   </body>
