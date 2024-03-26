@@ -23,6 +23,7 @@ prevBtn.onclick = (e) => {
 }
 
 carousel.onscroll = (e) =>{
+  if(window.innerWidth)
   carousel.scrollLeft <= 0 ? prevBtn.style.display = 'none' : prevBtn.style.display = 'block';
   (carousel.scrollWidth - carousel.clientWidth) === carousel.scrollLeft ? nxtBtn.style.display = 'none' : nxtBtn.style.display = 'block';
 }
