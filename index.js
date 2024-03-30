@@ -110,7 +110,7 @@ generateMobileScreenSelectOptions(
 );
 
 //list=[{pic:'',title:'',id:''}]
-function generateCarousleItems(carousel,list=[]){
+function geneCompoundsCarousleItems(carousel,list=[]){
   if(carousel) {
   const frag = document.createDocumentFragment();
   for(let item of list){
@@ -132,3 +132,39 @@ function generateCarousleItems(carousel,list=[]){
   carousel.append(frag)
 }
 };
+
+function geneUnitsCarousleItems(carousel,list=[]){
+  if(carousel) {
+    let content = ``;   
+    for(let item of list){
+      content += `<li class="unit-card">
+      <a href=${BASE_URL}/unit/${item?.id}>
+      <div class="card-header">
+          <div class="card-img"><img src=${item.pics[0]} alt=""></div>
+          <div class="delivery-date">
+              <p>Delivery In</p>
+              <p>${item?.delivery}</p>
+          </div>
+      </div>
+      <div class="card-body flex-col">
+        <div>
+          <h4>${item?.type} - ${item?.project}</h4>
+          <p>${item?.location}, ${item?.country}</p>
+        </div>
+        <p class="price">${formatCurrency(item?.price)} EGP</p>
+      </div>
+    </a>
+</li>`
+    };
+    carousel.innerHTML = content
+  }
+};
+
+function formatCurrency(number) {
+  if (!isNaN(Number(number))) {
+    let [integerPart, decimalPart] = String(number).split(".");
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return `${integerPart}${!!decimalPart && '.' +decimalPart || ''}`
+  }
+}
+

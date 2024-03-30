@@ -21,6 +21,15 @@ body {
   overflow: auto;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -174,7 +183,7 @@ section:not(#main section){
 }
 
 #contact form{
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 
@@ -223,10 +232,31 @@ section:not(#main section){
   animation: show 3s ease-out;
 }
 
+.contact-us{
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contact-info{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.contact-us img{
+  width: 2.5rem;
+}
+
+.contact-us h5{
+  font-size: 1em;
+}
+
 .unit-card{
   width: 450px;
   max-width: 70vw;
-  /* height: 420px; */
+  background-color: whitesmoke;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -254,7 +284,7 @@ section:not(#main section){
   position: absolute;
   content: '';
   inset: 0;
-  background-color:rgba(0, 0, 0, 0.3);;
+  background-color:rgba(0, 0, 0, 0.3);
 }
 
 
@@ -262,7 +292,7 @@ section:not(#main section){
   position: absolute;
   right: 10px;
   top: 100%;
-  transform: translateY(-100%);
+  transform: translateY(-110%);
   color: white;
   text-align: center;
   font-weight: 700;
@@ -270,7 +300,7 @@ section:not(#main section){
 
 footer{
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .links{
@@ -278,6 +308,7 @@ footer{
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .links img{
@@ -359,8 +390,14 @@ footer{
   text-align: center;
 }
 
+.list-item::before{
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color:rgba(0, 0, 0, 0.3);;
+}
+
 .list-item a{
-  text-decoration: none;
   color: white;
 }
 
