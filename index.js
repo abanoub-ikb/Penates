@@ -8,26 +8,33 @@ const mobileScreenBudgetSelect = document.querySelector("select[name=budget]");
 const phoneInputField = document.querySelector("#phone");
 const phoneErro  = document.querySelector(".alert");
 const successBox  = document.querySelector(".success-box");
-const carousel = document.querySelector('.carousel-wrapper');
-const prevBtn = document.getElementById('prev-btn');
-const nxtBtn = document.getElementById('nxt-btn');
+const carousel = document.querySelectorAll('.carousel-wrapper');
+const prevBtn = document.querySelectorAll('.prev-btn');
+const nxtBtn = document.querySelectorAll('.nxt-btn');
 
-carousel.scrollWidth === carousel.clientWidth && (nxtBtn.style.display = 'none');
-
-nxtBtn.onclick = (e) => {
-  carousel.scrollBy({left:carousel.clientWidth,behavior:"smooth"});
-}
-
-prevBtn.onclick = (e) => {
-  carousel.scrollBy({left:(carousel.clientWidth)*-1,behavior:"smooth"});
-}
-
-carousel.onscroll = (e) =>{
-  if(window.innerWidth > 850){
-    carousel.scrollLeft <= 0 ? prevBtn.style.display = 'none' : prevBtn.style.display = 'block';
-    (carousel.scrollWidth - carousel.clientWidth) === carousel.scrollLeft ? nxtBtn.style.display = 'none' : nxtBtn.style.display = 'block';
+carousel.forEach((el,i) => {
+  el.scrollWidth === el.clientWidth && (nxtBtn[i].style.display = 'none');
+  el.onscroll = (e) =>{
+    if(window.innerWidth > 850){
+      el.scrollLeft <= 0 ? prevBtn[i].style.display = 'none' : prevBtn[i].style.display = 'block';
+      (el.scrollWidth - el.clientWidth) === el.scrollLeft ? nxtBtn[i].style.display = 'none' : nxtBtn[i].style.display = 'block';
+    }
   }
-}
+});
+
+nxtBtn.forEach((el,i) => {
+  el.onclick = (e) => {
+    carousel[i].scrollBy({left:carousel[i].clientWidth,behavior:"smooth"});
+  }
+})
+
+prevBtn.forEach((el,i) => {
+  el.onclick = (e) => {
+    carousel[i].scrollBy({left:(carousel[i].clientWidth)*-1,behavior:"smooth"});
+  }
+});
+
+
 
 const phoneInput = window.intlTelInput(phoneInputField, {
   utilsScript:
@@ -101,3 +108,27 @@ generateMobileScreenSelectOptions(
   ["villa", "house", "apartment"],
   mobileScreenBudgetSelect
 );
+
+//list=[{pic:'',title:'',id:''}]
+function generateCarousleItems(carousel,list=[]){
+  if(carousel) {
+  const frag = document.createDocumentFragment();
+  for(let item of list){
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    let figure = document.createElement('figure');
+    let img = document.createElement('img');
+    let figcaption = document.createElement('figcaption');
+    li.role = 'listitem';
+    li.className = 'list-item';
+    a.href = item?.id ? `${BASE_URL}/${item?.id}` : '';
+    img.src = item?.pic;
+    figcaption.innerText = item?.tile;
+    figure.append(img,figcaption);
+    a.append(figure);
+    li.append(a);
+    frag.append(li);
+  };
+  carousel.append(frag)
+}
+};
