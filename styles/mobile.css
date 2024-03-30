@@ -16,7 +16,7 @@
       }
       
       #contact form{
-        width: 90vw;
+        width: 100%;
       }
   
     .submit {
@@ -40,7 +40,7 @@
       width: 100%;
     }
 
-    #prev-btn,#nxt-btn{
+    .prev-btn,.nxt-btn{
       display: none;
     }
   }
